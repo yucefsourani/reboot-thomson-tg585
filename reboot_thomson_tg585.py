@@ -46,8 +46,8 @@ def main():
         telnetparser.write(b"..\r\n")
         telnetparser.write(b"ip\r\n")
         telnetparser.write(b"iflist\r\n")
-        info     = telnetparser.read_until(b"\0",1).decode("utf-8")
-
+        info     = telnetparser.read_until(b"\0",1).decode("utf-8").split("\n")
+        
         while True:
             system("clear")
             print ("*********************************")
@@ -55,10 +55,10 @@ def main():
             print ("* https://arfedora.blogspot.com *")
             print ("* Thomson Gateway TG585 v7      *")
             print ("*********************************\n")
-            print(info.split("\n")[3])
-            print(info.split("\n")[4])
-            print(info.split("\n")[5])
-            print(info.split("\n")[6])
+            print(info[3])
+            print(info[4])
+            print(info[5])
+            print(info[6])
             print ("\nDownload Speed : {} kbps".format(download))
             print ("Upload   Speed : {}  kbps\n\n".format(upload))
             print("R To Reboot Modem || F To Refresh || Q To Quit :\n")
