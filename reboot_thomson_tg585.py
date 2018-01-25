@@ -61,7 +61,7 @@ def main():
             print(info[6])
             print ("\nDownload Speed : {} kbps".format(download))
             print ("Upload   Speed : {}  kbps\n\n".format(upload))
-            print("R To Reboot Modem || F To Refresh || Q To Quit :\n")
+            print("R To Reboot Modem || F To Refresh Info || Q To Quit :\n")
             answer = input("- ").strip()
             if answer == "q" or answer == "Q":
                 break
